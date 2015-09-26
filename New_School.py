@@ -15,7 +15,7 @@ for student in students:
 print('-'*50)
 
 print('УЧИНИКИ ОДНОФАМЕЛЬЦЫ')
-list_surname = [student['surname'] for student in students]
+list_surname = [student['surname'] for student in students] #Доделать
 
 file.close()
 print('-'*50)
