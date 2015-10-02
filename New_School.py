@@ -1,6 +1,6 @@
 import json
 
-file = open('/home/main/Загрузки/Students.json')
+file = open('/home/darkshark/Загрузки/Students.json')
 students = json.load(file)
 print('ИМЕНА ВСЕХ УЧЕНИКОВ')
 for student in students:
@@ -15,13 +15,19 @@ for student in students:
 print('-'*50)
 
 print('УЧИНИКИ ОДНОФАМЕЛЬЦЫ')
-list_surname = [student['surname'] for student in students] #Доделать
-
+list_surnames = [student['surname'] for student in students]
+dubles = []
+for surname in list_surnames:
+    if list_surnames.count(surname) > 1:
+        dubles.append(surname)
+duble = list(set(dubles))
+for surname in duble:
+    print(surname)
 file.close()
 print('-'*50)
 
 print('ИМЕНА ВСЕХ УЧИТЕЛЕЙ')
-file2 = open('/home/main/Загрузки/Teachers.json')
+file2 = open('/home/darkshark/Загрузки/Teachers.json')
 teachers = json.load(file2)
 for teacher in teachers:
     print(teacher['name'])
@@ -29,8 +35,8 @@ file2.close()
 print('-'*50)
 
 print('СПИСОК ВСЕХ ШКОЛ')
-file3_1 = open('/home/main/Загрузки/Students.json')
-file3_2 = open('/home/main/Загрузки/Teachers.json')
+file3_1 = open('/home/darkshark/Загрузки/Students.json')
+file3_2 = open('/home/darkshark/Загрузки/Teachers.json')
 
 schools_1 = json.load(file3_1)
 schools_2 = json.load(file3_2)
