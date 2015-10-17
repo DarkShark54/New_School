@@ -1,6 +1,5 @@
 import json
-
-file = open('/home/darkshark/Загрузки/Students.json')
+file = open('Data/Students.json')
 students = json.load(file)
 print('ИМЕНА ВСЕХ УЧЕНИКОВ')
 for student in students:
@@ -27,7 +26,7 @@ file.close()
 print('-'*50)
 
 print('ИМЕНА ВСЕХ УЧИТЕЛЕЙ')
-file2 = open('/home/darkshark/Загрузки/Teachers.json')
+file2 = open('Data/Teachers.json')
 teachers = json.load(file2)
 for teacher in teachers:
     print(teacher['name'])
@@ -35,8 +34,8 @@ file2.close()
 print('-'*50)
 
 print('СПИСОК ВСЕХ ШКОЛ')
-file3_1 = open('/home/darkshark/Загрузки/Students.json')
-file3_2 = open('/home/darkshark/Загрузки/Teachers.json')
+file3_1 = open('Data/Students.json')
+file3_2 = open('Data/Teachers.json')
 
 schools_1 = json.load(file3_1)
 schools_2 = json.load(file3_2)
